@@ -13,53 +13,53 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\rolController;
-use App\Http\Controllers\departamentoController;
-use App\Http\Controllers\estanteriaController;
-use App\Http\Controllers\usuarioController;
-use App\Http\Controllers\recepcionController;
-use App\Http\Controllers\documentacionController;
-use App\Http\Controllers\carpetaController;
+use App\Http\Controllers\RolController;
+use App\Http\Controllers\DepartamentoController;
+use App\Http\Controllers\EstanteriaController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\RecepcionController;
+use App\Http\Controllers\DocumentacionController;
+use App\Http\Controllers\CarpetaController;
 
-Route::get('/', HomeController::class);
+Route::get('/home', [HomeController::class,'index']);
 
 //rol
-Route::get('rol', [rolController::class, 'index']);
-Route::get('rol/create', [rolController::class, 'create']);
-Route::get('rol/{rol}', [rolController::class, 'show']);
+Route::get('rol', [RolController::class, 'index']);
+Route::get('rol/create', [RolController::class, 'create']);
+Route::get('rol/{rol}', [RolController::class, 'show']);
 
 
 //departamento
-Route::get('departamento', [departamentoController::class, 'index']);
-Route::get('departamento/create', [departamentoController::class, 'create']);
-Route::get('departamento/{departamento}', [departamentoController::class, 'show']);
+Route::get('departamento', [DepartamentoController::class, 'index']);
+Route::get('departamento/create', [DepartamentoController::class, 'create']);
+Route::get('departamento/{departamento}', [DepartamentoController::class, 'show']);
 
 
 //estanteria
-Route::get('estanteria', [estanteriaController::class, 'index']);
-Route::get('estanteria/create', [estanteriaController::class, 'create']);
-Route::get('estanteria/{estanteria}', [estanteriaController::class, 'show']);
+Route::get('estanteria', [EstanteriaController::class, 'index']);
+Route::get('estanteria/create', [EstanteriaController::class, 'create']);
+Route::get('estanteria/{estanteria}', [EstanteriaController::class, 'show']);
 
 
 //usuario
-Route::get('usuario', [usuarioController::class, 'index']);
-Route::get('usuario/create', [usuarioController::class, 'create']);
-Route::get('usuario/{usuario}', [eusuarioController::class, 'show']);
+Route::get('usuario', [UsuarioController::class, 'index']);
+Route::get('usuario/create', [UsuarioController::class, 'create']);
+Route::get('usuario/{usuario}', [UsuarioController::class, 'show']);
 
 
 //recepcion
-Route::get('recepcion', [recepcionController::class, 'index']);
-Route::get('recepcion/create', [recepcionController::class, 'create']);
-Route::get('recepcion/{recepcion}', [recepcionController::class, 'show']);
+Route::get('recepcion', [RecepcionController::class, 'index']);
+Route::get('recepcion/create', [RecepcionController::class, 'create']);
+Route::get('recepcion/{recepcion}', [RecepcionController::class, 'show']);
 
 
 //documentacion
-Route::get('documentacion', [documentacionController::class, 'index']);
-Route::get('documentacion/create', [documentacionController::class, 'create']);
-Route::get('documentacion/{documentacion}', [documentacionController::class, 'show']);
+Route::get('documentacion', [DocumentacionController::class, 'index']);
+Route::get('documentacion/create', [DocumentacionController::class, 'create']);
+Route::get('documentacion/{documentacion}', [DocumentacionController::class, 'show']);
 
 
 //carpetas
-Route::get('carpetas', [carpetasController::class, 'index']);
-Route::get('carpetas/create', [carpetasController::class, 'create']);
-Route::get('carpetas/{carpetas}', [carpetasController::class, 'show']);
+Route::get('carpetas', [CarpetasController::class, 'index']);
+Route::get('carpetas/create', [CarpetasController::class, 'create']);
+Route::get('carpetas/{carpetas}', [CarpetasController::class, 'show']);
